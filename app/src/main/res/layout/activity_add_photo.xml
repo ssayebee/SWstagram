@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPhotoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="35dp">
+
+        <ImageView
+            android:src="@drawable/logo_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/toolbar_division"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/my_toolbar"
+        android:background="@color/colorDivision"
+        android:layout_alignParentStart="true" android:layout_marginLeft="0dp" android:layout_marginStart="0dp"
+        android:layout_alignParentLeft="true">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editText"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/addphoto_image"
+        android:layout_below="@+id/toolbar_division"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_below="@+id/toolbar_division"
+            android:id="@+id/addphoto_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <EditText
+            android:paddingLeft="10dp"
+            android:id="@+id/addphoto_edit_explain"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textCursorDrawable="@android:color/black"
+            android:background="@drawable/my_border"
+            android:hint="문구 입력 .."/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_above="@id/addphoto_btn_upload"
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <Button
+        android:id="@+id/addphoto_btn_upload"
+        android:background="@drawable/follow_btn"
+        android:text="@string/upload_image"
+        android:theme="@style/ButtonStyle"
+        android:layout_toRightOf="@+id/addphoto_image"
+        android:layout_below="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        />
+
+</RelativeLayout>
